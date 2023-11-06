@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
 
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
@@ -27,7 +28,7 @@ touchscreen = st.selectbox('Touchscreen',['No','Yes'])
 ips = st.selectbox('IPS',['No','Yes'])
 
 # screen size
-screen_size = st.number_input('Screen Size')
+screen_size = st.number_input('Screen Size(in inches)')
 
 # resolution
 resolution = st.selectbox('Screen Resolution',['1920x1080','1366x768','1600x900','3840x2160','3200x1800','2880x1800','2560x1600','2560x1440','2304x1440'])
